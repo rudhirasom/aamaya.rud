@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: url("https://i.imgur.com/P2MNcal.png");
+    background-position: center center;
+}
+
+.paper {
+    background-image: url("https://i.imgur.com/2fj8clP.png");
+    background-size: cover;
+    padding: 20px 100px;
+    transform: rotateZ(-5deg);
+    box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+    position: absolute;
+    touch-action: none; /* Added for better touch support */
+    border-radius: 15px; /* Rounded corners for all paper elements */
+}
+
+.paper.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    border-radius: 50%; /* Fully round shape */
+}
+
+.paper.image p {
+    font-size: 30px;
+}
+
+img {
+    max-height: 200px;
+    width: auto;
+    display: block; /* Ensure images are centered if they are smaller than container */
+    margin: 0 auto;
+    user-select: none;
+}
+
+.paper.heart::after {
+    content: "";
+    background-image: url('https://i.imgur.com/FP31Qft.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover; /* Ensure the image covers the round shape */
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    border-radius: 50%; /* Ensure the image is fully round */
+}
+
+p {
+    font-family: 'Zeyada', cursive;
+    font-size: 29px;
+    color: rgb(0,0,100);
+    opacity: 0.75;
+    user-select: none;
+}
+
+.bolder-text {
+    font-weight: bold; /* Makes the text bolder */
+}
